@@ -25,7 +25,8 @@ export const goalsSlice = createSlice({
         },
         deleteGoals: (state, action) => {
             const {id} = action.payload;
-            state = state.filter(goal => goal.id !== id);
+            const updatedState = Object.values(state).filter(goal => goal.id !== id);
+            return updatedState;
         },
         completeGoals: (state, action) => {
             const {id} = action.payload;

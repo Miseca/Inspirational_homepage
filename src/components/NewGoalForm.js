@@ -6,7 +6,7 @@ import { addGoals } from '../features/goals/goalsSlice';
 
 export default function NewGoalForm() {
     const [text, setText] = useState("");
-    const [completedStatus, setCompletedStatus] = useState(false);
+    //const [completedStatus, setCompletedStatus] = useState(false);
     const dispatch = useDispatch();
 
 
@@ -27,7 +27,6 @@ export default function NewGoalForm() {
 
 
 
-
     return (
         <section>
             <h1>What's on your mind?</h1>
@@ -35,7 +34,7 @@ export default function NewGoalForm() {
                 <input
                     value = {text}
                     onChange = {(e) => setText(e.currentTarget.value)}
-                    placeholder = "Peepee" 
+                    placeholder = "" 
                 />
             </form>
         </section>
