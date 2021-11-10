@@ -25,8 +25,18 @@ export const goalsSlice = createSlice({
         },
         deleteGoals: (state, action) => {
             const {id} = action.payload;
-            const updatedState = Object.values(state).filter(goal => goal.id !== id);
-            return updatedState;
+            //Works Fine for both preset goals and newly added goals not sure if this is the best method.
+            delete state[id];
+            
+            /* (REDUCE METHOD) Works only for newly created goals not sure why it doesnt work for preset goals.
+            const deleteGoal = Object.keys(state).reduce((acc, key) => {
+                if (key !== id) {
+                    acc[key] = state[key]
+                }
+                return acc
+                }, {})
+            return deleteGoal;
+            */
         },
         completeGoals: (state, action) => {
             const {id} = action.payload;

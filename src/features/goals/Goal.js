@@ -11,13 +11,11 @@ export default function Goal({ goal }) {
 
     const handleDelete = (e) => {
     e.preventDefault();
-    console.log(goal);
     dispatch(deleteGoals(goal));
     };
 
     const handleComplete = (e) => {
     e.preventDefault();
-    console.log(goal);
     dispatch(completeGoals(goal));
     };
 
