@@ -1,17 +1,16 @@
 import React from "react";
-
 //Importing quotesSlice actions and selectors
 import { useDispatch, useSelector } from "react-redux";
-import { selectCurrentQuote, isLoadingCurrentQuote, loadCurrentQuote } from "./quotesSlice";
+import { selectQuotes, isLoadingQuotes, loadQuotes } from "./quotesSlice";
+import CurrentQuote from "./Quote";
 
 
-export const Quote = () => {
+export default function Quote() {
     const dispatch = useDispatch();
-    const quote = useSelector(selectCurrentQuote);
-    const quoteIsLoading = useSelector(isLoadingCurrentQuote);
+    const quote = useSelector(selectQuotes);
+    const quoteIsLoading = useSelector(isLoadingQuotes);
 
-    // dispatch(loadCurrentQuote());
-
+    // dispatch(loadQuotes());
 
     if (quoteIsLoading) {
         return <div>Loading...</div>
@@ -21,9 +20,6 @@ export const Quote = () => {
     }
 
     return (
-        <section>
-            <span>{quote.q}</span>
-            <span>{quote.a}</span>
-        </section>
+        <CurrentQuote quote = {quote}/>
     );
 }

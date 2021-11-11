@@ -5,7 +5,8 @@ import './App.css';
 //Render Components Imports
 import NewGoalForm from './components/NewGoalForm';
 import Goals from './features/goals/Goals';
-import { Quote } from './features/quotes/Quotes';
+import Quote  from './features/quotes/Quotes';
+import InspirationalBackgrounds from './features/inspirationalBackground/InspirationalBackgrounds';
 
 function App() {
   return (
@@ -16,10 +17,9 @@ function App() {
         </section>
         <NewGoalForm />
         <Goals />
+        <Quote />
+        <InspirationalBackgrounds />
       </div>
-      <footer>
-      <Quote />
-      </footer>
     </main>
 
   );
