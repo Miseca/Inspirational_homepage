@@ -7,6 +7,7 @@ import NewGoalForm from './components/NewGoalForm';
 import Goals from './features/goals/Goals';
 import Quote  from './features/quotes/Quotes';
 import InspirationalBackgrounds from './features/inspirationalBackground/InspirationalBackgrounds';
+import Weather from './features/weather/Weather';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <section>
           Hello World!
         </section>
+        <Weather />
         <NewGoalForm />
         <Goals />
         <Quote />

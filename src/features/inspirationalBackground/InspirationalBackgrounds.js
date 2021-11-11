@@ -1,3 +1,4 @@
+import React from "react";
 //Import goals and goals selector
 import { selectInspirationalBackgrounds } from "./inspirationalBackgroundSlices";
 import { useSelector } from "react-redux";
