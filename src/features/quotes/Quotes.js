@@ -10,7 +10,7 @@ export default function Quote() {
     const quote = useSelector(selectQuotes);
     const quoteIsLoading = useSelector(isLoadingQuotes);
 
-    // dispatch(loadQuotes());
+    dispatch(loadQuotes());
 
     if (quoteIsLoading) {
         return <div>Loading...</div>

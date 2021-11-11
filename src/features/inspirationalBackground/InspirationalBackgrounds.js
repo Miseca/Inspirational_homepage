@@ -7,7 +7,7 @@ import logo from '../../logo.svg';
 
 
 export default function InspirationalBackgrounds() {
-    const inspirationalBackgrounds = useSelector(selectInspirationalBackgrounds);
+    //const inspirationalBackgrounds = useSelector(selectInspirationalBackgrounds);
 
     return (
         <section>

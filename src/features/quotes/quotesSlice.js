@@ -4,12 +4,12 @@ export const loadQuotes = createAsyncThunk(
     'quotes/loadQuotes',
     async () => {
         //FOR FETCHING FROM REAL API
-        //const response = await fetch(`https://zenquotes.io/api/quotes/`);
-        //const json = await response.json();
+        const response = await fetch(`https://zenquotes.io/api/quotes/`);
+        const json = await response.json();
         //CONSOLE LOG
-        //console.log("inside thunk loadCurrentQuote");
-        //console.log(json);
-        //return json;
+        console.log("inside thunk loadCurrentQuote");
+        console.log(json);
+        return json;
 
         // const response = await fetch("../../data/quotes.JSON");
         // const json = await response.json();
