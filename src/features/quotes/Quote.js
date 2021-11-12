@@ -5,8 +5,10 @@ import { useDispatch } from "react-redux";
 
 export default function CurrentQuote({quote}) {
     const dispatch = useDispatch();
-    var quoteText = quote.q;
-    var quoteAuthor = quote.a;
+    //console.log("this is the quote object from my initial state")
+    //console.log(quote);
+    var quoteText = quote.quote;
+    var quoteAuthor = quote.author;
 
     const handleChange = (e) => {
         e.preventDefault();

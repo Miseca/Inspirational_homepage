@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //Importing quotesSlice actions and selectors
 import { useDispatch, useSelector } from "react-redux";
 import { selectQuotes, isLoadingQuotes, loadQuotes } from "./quotesSlice";
@@ -10,7 +10,11 @@ export default function Quote() {
     const quote = useSelector(selectQuotes);
     const quoteIsLoading = useSelector(isLoadingQuotes);
 
-    dispatch(loadQuotes());
+    //dispatch(generateNewQuote());
+    useEffect(()=> {
+        dispatch(loadQuotes());
+    }, [dispatch])
+    //console.log("quote");
 
     if (quoteIsLoading) {
         return <div>Loading...</div>
