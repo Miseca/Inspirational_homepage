@@ -3,19 +3,25 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const loadWeather = createAsyncThunk(
     'weather/loadWeather',
     async () => {
-        //FOR FETCHING FROM Unsplash API (needs work)
-        // const response = await fetch(
-        //     '',
-        //     {
-        //         method: 'GET',
-
-        //     }
-        // );
-        //const json = await response.json();
-        //CONSOLE LOG
-        //console.log("inside thunk ");
-        //console.log(json);
-        //return json;
+        // FOR FETCHING FROM Unsplash API (needs work)
+        const response = await fetch(
+            'https://api.openweathermap.org/data/2.5/weather?id=7281804&units=metric&appid=b777088271bc4ceeff8897bbac0fc088',
+            {
+                method: 'GET',
+                mode: "cors"
+            }
+        );
+        const json = await response.json();
+        // CONSOLE LOG
+        console.log("inside weather fetch ");
+        console.log(json);
+        const weather = {
+            weather: json.weather, 
+            main: json.main,
+            name: json.name
+        }
+        console.log(weather)
+        return weather;
     }
 );
 
