@@ -19,7 +19,7 @@ export default function CurrentQuote({quote}) {
         <section className = "quote-text">
             {/* <button onClick = {handleChange}>Next</button> */}
             <span className = "quote-quote">"{quote.quote}"</span>
-            <span className = "quote-author">{quote.author}</span>    
+            <span className = "quote-author">-{quote.author}</span>    
         </section>
     );
 }
