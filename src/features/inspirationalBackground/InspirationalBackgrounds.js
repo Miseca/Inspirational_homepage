@@ -10,15 +10,12 @@ export default function InspirationalBackgrounds() {
     const isLoading = useSelector(isLoadingInspirationalBackgrounds);
     // console.log("HELLLLLLOOOOO")
     // console.log(inspirationalBackgrounds);
-    var imageLink = ''
     
 
     useEffect(()=> {
         dispatch(loadInspirationalBackgrounds());
         
-    }, [])
-
-
+    }, [dispatch])
 
     if (isLoading) {
         return <div>Loading...</div>
@@ -36,14 +33,13 @@ export default function InspirationalBackgrounds() {
         dispatch(prevImage());
     }
 
-    imageLink = inspirationalBackgrounds.urls.regular;
-
     return (
-        <section>
-            <h4>Background</h4>
-            <button onClick = {nextHandleChange}>Next</button>
-            <button onClick = {prevHandleChange}>Previous</button>
-            <img src ={imageLink} alt = "background"/>
+        <section >
+            <div className = "buttons">
+                <button onClick = {nextHandleChange} className = "next-image-button">Next</button>
+                <button onClick = {prevHandleChange} className = "prev-image-button">Prev</button>
+            </div>
+            <img src ={inspirationalBackgrounds.urls.full} alt = "background" className = "background-image"/>
         </section>
     );
 }

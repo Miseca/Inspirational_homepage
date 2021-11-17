@@ -29,9 +29,10 @@ export default function NewGoalForm() {
 
     return (
         <section>
-            <h1>What's on your mind?</h1>
+            <span className = "goal-form-header">What's on your mind?</span>
             <form onSubmit = {handleSubmit}>
                 <input
+                    className = "goal-input"
                     value = {text}
                     onChange = {(e) => setText(e.currentTarget.value)}
                     placeholder = "" 

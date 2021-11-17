@@ -13,11 +13,12 @@ export const loadWeather = createAsyncThunk(
         );
         const json = await response.json();
         // CONSOLE LOG
-        console.log("inside weather fetch ");
-        console.log(json);
+        // console.log("inside weather fetch ");
+        // console.log(json);
         const weather = {
-            weather: json.weather, 
-            main: json.main,
+            description: json.weather[0].description, 
+            icon: json.weather[0].icon,
+            temp: json.main.temp,
             name: json.name
         }
         console.log(weather)

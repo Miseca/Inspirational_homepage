@@ -10,9 +10,8 @@ export default function Goals() {
 
     return (
         <section>
-            <h1>Goals</h1>
             <div>
-                <ul>
+                <ul className = "goal-list">
                     {Object.values(goals).map((goal, goalIndex) => {
                         return (
                             <Goal goal = {goal} key = {goalIndex} />

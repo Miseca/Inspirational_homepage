@@ -5,12 +5,12 @@ export const goalsSlice = createSlice({
     initialState: {
         453: {
             id: "453",
-            text: "Hello",
+            text: "Complete a project",
             completedStatus: false
         },
         999: {
             id: "999",
-            text: "Wo0o0o0o",
+            text: "Learn Intermediate CSS",
             completedStatus: false
         }
     },

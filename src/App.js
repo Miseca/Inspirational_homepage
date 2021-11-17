@@ -11,19 +11,29 @@ import Weather from './features/weather/Weather';
 
 function App() {
   return (
-    <main>
-      <div className="App">
-        <section>
-          Hello World!
-        </section>
-        <Weather />
-        <NewGoalForm />
-        <Goals />
-        <Quote />
-        <InspirationalBackgrounds />
-      </div>
-    </main>
-
+        <div className="App">
+          <div className = "background-container">
+            <InspirationalBackgrounds />
+          </div>
+          <header>
+            <div className = "weather-container">
+              <Weather />
+            </div>
+          </header>
+          <main>
+            <div className = "goal-form">
+              <NewGoalForm />
+            </div>
+            <div className = "goal-container">
+              <Goals />
+            </div>
+          </main>
+          <footer>
+            <div className = "quote-container">
+              <Quote />
+            </div>
+          </footer>
+        </div>
   );
 }
 

@@ -5,9 +5,263 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* CONTAINERS */
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Header Header Header"
+    "Main Main Main"
+    "Footer Footer Footer";
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  grid-area: Header;
+  padding: 12px 24px;
+}
+
+main {
+  grid-area: Main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+footer {
+  grid-area: Footer;
+  align-items: center;
+}
+
+.background-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.goal-container {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: fit-content;
+  padding: 24px 24px;
+  width: 85%;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.goal-form {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: fit-content;
+  padding: 24px 24px;
+  width: 85%;
+  margin: 12px;
+}
+
+.quote-container {
+  z-index: 1;
+}
+/* GOAL FORM SECTION*/
+
+.goal-form-header {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  line-height: 46px;
+  text-shadow: 0 2px 4px rgb(71 97 206 / 36%);
+  position: relative;
+  top: 4px;
+  text-align: start;
+}
+
+.goal-input {
+  width: 100%;
+  padding-top: 4px;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 2.25em;
+  line-height: 1.2;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+}
+
+
+/* GOAL SECTION */
+.goal-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goal {
+  background-color: rgb(194, 231, 253);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: fit-content;
+  padding: 24px 35px;
+  margin: 6px;
+  position: relative;
+  font-size: 18px;
+}
+
+.goal-button-container {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  display: flex;
+  opacity: 100;
+  transition: opacity 0.1s ease-in;
+}
+
+.goal-button-container button {
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.2s ease-in;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.button-remove {
+  color: white;
+  background-color: red;
+}
+
+.button-complete {
+  color: white;
+  background-color: rgb(37, 190, 37);
+}
+/* GOAL COMPLETED SECTION */
+.goal-complete {
+  background-color: rgb(194, 231, 253);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: fit-content;
+  padding: 24px 35px;
+  margin: 6px;
+  position: relative;
+  font-size: 18px;
+  opacity: 50%;
+}
+
+
+.button-complete-clicked {
+  color: white;
+  background-color: rgb(37, 190, 37);
+  opacity: 30%;
+}
+
+.button-remove-clicked {
+  color: white;
+  background-color: red;
+  opacity: 100%;
+}
+
+/* BACKGROUND IMAGE SECTION */
+.background-image {
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  /* OPACTIY SO I CAN SEE WHAT IM DOING*/
+  opacity: 60%;
+  filter: blur(5px)
+}
+
+.next-image-button {
+  position: absolute;
+  bottom: 50%;
+  right: 0.6rem;
+}
+
+.prev-image-button {
+  position: absolute;
+  bottom: 50%;
+  left: 0.6rem;
+}
+
+
+/* WEATHER APP SECTION */
+.weather-text {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.weather-app {
+  display: flex;
+}
+
+.weather-icon {
+  justify-content: center;
+}
+
+.weather-temp {
+  font-size: 30px;
+}
+
+/* QUOTE SECTION */
+
+.quote-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-quote {
+  font-weight: 100;
+  font-size: 22px;
+}
+
+.quote-author {
+  font-style: italic;
+  opacity: 75%;
+}
+

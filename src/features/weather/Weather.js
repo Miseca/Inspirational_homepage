@@ -8,13 +8,18 @@ export default function Weather() {
     const dispatch = useDispatch();
     const isLoading = useSelector(isLoadingWeather);
     const weather = useSelector(selectWeather);
-    var weatherStats = {};
+    // var weatherStats = {        
+    //     description: '',
+    //     icon: '',
+    //     temp: '',
+    //     name: ''
+    // };
 
     useEffect(() => {
         dispatch(loadWeather());
         
-    }, [])
-
+    }, [dispatch])
+    
     if (isLoading) {
         return <div>Loading...</div>
     }
@@ -24,20 +29,23 @@ export default function Weather() {
 
 
 
-    weatherStats = {
-        description: weather.weather[0].description,
-        icon: weather.weather[0].icon,
-        temp: weather.main.temp,
-        name: weather.name
-    }
+    // weatherStats = {
+    //     description: weather.weather[0].description,
+    //     icon: weather.weather[0].icon,
+    //     temp: weather.main.temp,
+    //     name: weather.name
+    // }
 
     return (
-        <div>
-            <h4>Weather App</h4>
-            <span>{weatherStats.name}</span>
-            <img src = {`http://openweathermap.org/img/wn/${weatherStats.icon}@2x.png`} alt = "Weather Icon"/>
-            <span>{weatherStats.temp} &#8451;</span>
-            <span>{weatherStats.description}</span>
+        <div className = "weather-app">
+            <div className = "weather-icon">
+                <img src = {`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt = "Weather Icon"/>
+            </div>
+            <div className = "weather-text">
+                <span>{weather.name}</span>
+                <span className = "weather-temp">{weather.temp} &#8451;</span>
+                <span>{weather.description}</span>
+            </div>
         </div>
     );
 }
