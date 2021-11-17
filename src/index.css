@@ -130,7 +130,7 @@ footer {
 }
 
 .goal {
-  background-color: rgb(194, 231, 253);
+  background-color: rgba(194, 231, 253, 0.7);
   backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -253,6 +253,7 @@ footer {
 .quote-text {
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
 }
 
 .quote-quote {
