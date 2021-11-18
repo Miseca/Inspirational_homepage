@@ -147,7 +147,6 @@ footer {
   right: -12px;
   display: flex;
   opacity: 100;
-  transition: opacity 0.1s ease-in;
 }
 
 .goal-button-container button {
@@ -157,7 +156,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: filter 0.2s ease-in;
   outline: none;
   color: white;
   font-weight: 700;
@@ -215,16 +213,37 @@ footer {
   filter: blur(5px)
 }
 
+.image-buttons {
+
+}
 .next-image-button {
   position: absolute;
   bottom: 50%;
   right: 0.6rem;
+  height: fit-content;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 64px;
+  cursor: pointer;
+  font-weight: 200;
+  opacity: 0.5;
 }
 
 .prev-image-button {
   position: absolute;
   bottom: 50%;
   left: 0.6rem;
+  height: fit-content;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 64px;
+  cursor: pointer;
+  font-weight: 200;
+  opacity: 0.5;
 }
 
 

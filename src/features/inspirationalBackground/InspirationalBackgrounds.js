@@ -35,11 +35,12 @@ export default function InspirationalBackgrounds() {
 
     return (
         <section >
-            <div className = "buttons">
-                <button onClick = {nextHandleChange} className = "next-image-button"> <img src = "../../data/right_arrow.png"/></button>
-                <button onClick = {prevHandleChange} className = "prev-image-button">Prev</button>
+            <div className = "image-buttons">
+                <button onClick = {nextHandleChange} className = "next-image-button">&#62;</button>
+                <button onClick = {prevHandleChange} className = "prev-image-button">&#60;</button>
             </div>
             <img src ={inspirationalBackgrounds.urls.full} alt = "background" className = "background-image"/>
         </section>
     );
 }
+

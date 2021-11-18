@@ -8,12 +8,6 @@ export default function Weather() {
     const dispatch = useDispatch();
     const isLoading = useSelector(isLoadingWeather);
     const weather = useSelector(selectWeather);
-    // var weatherStats = {        
-    //     description: '',
-    //     icon: '',
-    //     temp: '',
-    //     name: ''
-    // };
 
     useEffect(() => {
         dispatch(loadWeather());
@@ -26,15 +20,6 @@ export default function Weather() {
     else if (!weather) {
         return null;
     }
-
-
-
-    // weatherStats = {
-    //     description: weather.weather[0].description,
-    //     icon: weather.weather[0].icon,
-    //     temp: weather.main.temp,
-    //     name: weather.name
-    // }
 
     return (
         <div className = "weather-app">
