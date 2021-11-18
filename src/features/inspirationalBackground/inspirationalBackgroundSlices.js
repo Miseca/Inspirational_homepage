@@ -5,7 +5,7 @@ export const loadInspirationalBackgrounds = createAsyncThunk(
     async () => {
         // FOR FETCHING FROM Unsplash API (needs work)
         const response = await fetch(
-            `https://api.unsplash.com/photos/?client_id=q_fwbZLSMx3LdAF_WGYAJfKTms9EAL7BO172X1rw8A4`,
+            `https://api.unsplash.com/search/?page=1&query=landscape&client_id=q_fwbZLSMx3LdAF_WGYAJfKTms9EAL7BO172X1rw8A4`,
             {
                 method: 'GET',
                 mode: "cors",
@@ -15,7 +15,7 @@ export const loadInspirationalBackgrounds = createAsyncThunk(
         // CONSOLE LOG
         // console.log("inside thunk ");
         // console.log(json);
-        return json;
+        return json.photos.results;
     }
 );
 
