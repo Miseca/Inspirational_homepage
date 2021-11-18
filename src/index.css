@@ -146,7 +146,7 @@ footer {
   top: -12px;
   right: -12px;
   display: flex;
-  opacity: 100;
+  opacity: 1.0;
 }
 
 .goal-button-container button {
@@ -183,20 +183,20 @@ footer {
   margin: 6px;
   position: relative;
   font-size: 18px;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 
 .button-complete-clicked {
   color: white;
   background-color: rgb(37, 190, 37);
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .button-remove-clicked {
   color: white;
   background-color: red;
-  opacity: 100%;
+  opacity: 1.0;
 }
 
 /* BACKGROUND IMAGE SECTION */
@@ -209,7 +209,7 @@ footer {
   overflow: hidden;
   z-index: -1;
   /* OPACTIY SO I CAN SEE WHAT IM DOING*/
-  opacity: 60%;
+  opacity: 0.6;
   filter: blur(5px)
 }
 
@@ -282,6 +282,6 @@ footer {
 
 .quote-author {
   font-style: italic;
-  opacity: 75%;
+  opacity: 0.75;
 }
 
