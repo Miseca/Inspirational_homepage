@@ -4,9 +4,13 @@ One of my first projects implementing React/Redux to create an Inspirational hom
 
 Features include:   
 Weather App (From openweathermap api, showing north melbourne as default)
+
 Goal Form (for adding new goals)
+
 Goal List (showing your current goals and options to mark them as completed or to remove them)
+
 Background Images (From unsplash api used to provide the landscape photos in the background, with buttons to shift through 10 of them)
+
 Quote (From a quote.rest api that shows the daily quote)
 
 
