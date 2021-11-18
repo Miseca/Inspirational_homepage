@@ -32,8 +32,8 @@ export const goalsSlice = createSlice({
             // (REDUCE METHOD) Works Now.
             const deleteGoal = Object.keys(state).reduce((acc, key) => {
                 //If check matches types
-                console.log(key);
-                console.log(state[key]);
+                // console.log(key);
+                // console.log(state[key]);
                 if (key !== id) {
                     acc[key] = state[key]
                 }
