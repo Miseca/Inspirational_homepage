@@ -1,3 +1,16 @@
+# inspirational_homepage
+
+One of my first projects implementing React/Redux to create an Inspirational homepage.
+
+Features include:   Weather App (From openweathermap api, showing north melbourne as default)
+                    Goal Form (for adding new goals)
+                    Goal List (showing your current goals and options to mark them as completed or to remove them)
+                    Background Images (From unsplash api used to provide the landscape photos in the background, with buttons to shift through 10 of them)
+                    Quote (From a quote.rest api that shows the daily quote)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
@@ -42,4 +55,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# inspirational_homepage
+
