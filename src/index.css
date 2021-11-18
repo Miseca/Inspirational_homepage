@@ -174,7 +174,7 @@ footer {
 }
 /* GOAL COMPLETED SECTION */
 .goal-complete {
-  background-color: rgb(194, 231, 253);
+  background-color: rgb(89, 255, 48);
   backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
